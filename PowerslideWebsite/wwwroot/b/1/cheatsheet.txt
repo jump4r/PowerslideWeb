@@ -1,0 +1,89 @@
+Study Guide
+
+4 Principals of Object Oriented Programming 
+
+- Encapsulation: The process of hiding data implementation by restrictiong access to accessors and mutators. 
+The use of 'public', 'private', 'protected'
+	= Accessors - "Getters"
+	= Mutators - "Setters"
+
+- Abstraction: Used to mangage complexity. Defines a 'view'/'base' for an actual item. Used to hite certain details and 
+shows only the essential features of the object. An 'interface'.
+
+- Inheritance: Used to denote a sub-object which can be one of many created from a parent object.
+
+- Polymorphism: One funciton name that can do more than one thing given different arguements.
+
+Terms:
+
+Interface: Essentially a base class Every method in an interface must be implemented by a child class. 
+
+Abstract class - similar to an interface, except only abstract classes must be declared by the child. A child class can only implement
+ one abstract class
+
+Package: a namespace for organizing your classes, I've never coded a project big enough to use this. 
+
+Object: A thing, instantiation of a class
+
+Class: Definition of an object, defining how it functions and interacts with other objects/code.
+
+Constructors: Method that is called when an object is instantiated, defines how an object is created. Polymorphism allowed.
+
+OOP - Programming paradigm based around using objects to design applications.
+
+
+
+C#:
+- Microsoft's Programming network, based in the .NET framework. .NET is the framework which defines a Common Language Specification
+(CLS), and allows seamless interoperability between CLS-complient languages. 
+
+Fastest Search: Binary Search
+
+Fastest Sort: Quick, Merge, Heap
+- Merge: Divide list in to the smallest element, compare those and merge, then compare each list to the adjacent list.
+
+- When to use Interface vs. Abstract class
+	= Abstract Classes offer default implementations of methods.
+	= You can provide also input behavour unrelated to the interface.
+	= Abstract class is good for generating similar classes, Interfaces gives an 
+	'ability' to a class.
+
+Value - A variable (int, string)
+Reference - A pointer to a container which has other values or references.
+
+SQL:
+- Primary Key: A unique element to mark an entry in a table in a databse. Each element can only have one primary key
+- Foreign Key: Used to create a relationship between two tables in a database, i.e. an "Albums" table and a "Songs" table.
+
+Java;
+- Annotation: used to give information to the compiler, i.e. warnings, author, readonly vars, etc.
+ = Can be used to replace comments
+ = Marked with '@'
+- Generics can be used to re-use code with different types of inputs, the same in C#
+- Collection - A framework that provides the archetecutre to store and manipulate a group of objects. A list/set/queue.
+
+Other Things: 
+Threading basics: 
+- Allows the user to perform multiple tasks simultaniously. 
+- Threads are independant, so an exception in one does not affect other threads.
+- Threading issues
+ = Race Condition: Two threads attempt to change a variable at the same time, resulting in an incorrect calculation. 
+ = Deadlock: Conflict of a shared resources, two (or more) threads are blocking each other. T1
+
+ ASP.NET Questions
+ - How does dependency injection work with <Startup> when called from <Program.cs>
+
+ - When should you use direct SQl instead of using LINQ?
+   - Perfomance considerations when using Linq, 
+   - If things are more an SQL COMMAND rather than a query.
+
+ - Can you use dependency injection with abstract classes instead of interfaces?
+
+ - What does [BindProperty] do and how does it relate to Model Binding?
+    - Binds together 2 things (i.e, a variable and a row in a table).
+
+.NET Assembly - A compiled piece of code       
+.NET Core - Cross platform, Scalable
+.NET Framework - Windows only
+.NET Standard - Specification of .NET applications
+

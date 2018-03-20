@@ -1,0 +1,117 @@
+﻿@page
+@model PowerslideWebsite.Pages.Beatmaps.IndexModel
+
+@{
+    ViewData["Title"] = "Beatmaps"; // I Changed this from "Index"
+}
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div>
+    <div id="submission-modal-wrapper">
+        <div id="submission-modal-form">
+            <button id="submission-modal-close" class="btn">&times;</button>
+            <h2 id="submission-title">Upload Beatmap</h2>
+            <form method="post" enctype="multipart/form-data">
+                <div class="submission-form-element">
+                    <label asp-for="FileUpload.User" class="control-label"></label>
+                    <input asp-for="FileUpload.User" type="text" value="@UserManager.GetUserName(User)" class="form-control" disabled />
+                    <span asp-validation-for="FileUpload.User" class="text-danger"></span>
+                </div>
+
+                <div class="submission-form-element">
+                    <label asp-for="FileUpload.Artist" class="control-label"></label>
+                    <input asp-for="FileUpload.Artist" type="text" class="form-control" />
+                    <span asp-validation-for="FileUpload.Artist" class="text-danger"></span>
+                </div>
+
+                <div class="submission-form-element">
+                    <label asp-for="FileUpload.Song" class="control-label"></label>
+                    <input asp-for="FileUpload.Song" type="text" class="form-control" />
+                    <span asp-validation-for="FileUpload.Song" class="text-danger"></span>
+                </div>
+
+                <div class="submission-form-element">
+                    <label asp-for="FileUpload.BeatmapSong" class="control-label"></label>
+                    <input asp-for="FileUpload.BeatmapSong" type="file" class="form-control" />
+                    <span asp-validation-for="FileUpload.BeatmapSong" class="text-danger"></span>
+                </div>
+
+                <div class="submission-form-element">
+                    <label asp-for="FileUpload.BeatmapFiles" class="control-label"></label>
+                    <input asp-for="FileUpload.BeatmapFiles" type="file" accept="txt" multiple="Multiple" class="form-control" />
+                    <span asp-validation-for="FileUpload.BeatmapFiles" class="text-danger"></span>
+                </div>
+
+                <input type="submit" value="Upload" class="btn btn-default" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="beatmap-page-content">
+    <div id="featured-beatmaps-wrapper">
+        <h1 class="page-title">Featured Charts</h1>
+        <div class="featured-beatmaps-content" id="featured-beatmaps-carousel" data-slick="{'slidesToShow': 3, 'slidesToScroll': 3}">
+            @foreach (var item in Model.Submission)
+            {
+                @if (item.Featured)
+                {
+                    <div class="featured-beatmap">
+                        <div class="featured-beatmap-image-wrapper center">
+                            <img class="featured-beatmap-image margin-center" src="http://via.placeholder.com/250x250" />
+                        </div>
+                        <div class="featured-beatmap-meta">
+                            <div class="featured-beatmap-song">
+                                @Html.DisplayFor(modelItem => item.Artist) - @Html.DisplayFor(modelItem => item.Song)
+                            </div>
+                            <div class="featured-beatmap-user">
+                                Mapped by @Html.DisplayFor(modelItem => item.User)
+                            </div>
+                            <div class="featured-beatmap-links">
+                                <a href="~/downloads/@item.ID/beatmap.zip" download>
+                                    <img class="download-image margin-center" src="~/images/download.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <input id="filter-input" name="filter" placeholder="Type to filter (Artist, Tytle)" />
+    </div>
+    <div class="submission-button-wrapper">
+        <button id="submission-modal-open" class="btn">Upload Beatmap</button>
+    </div>
+    <div class="beatmap-list">
+        @foreach (var item in Model.Submission)
+        {
+            <div class="beatmap">
+                <div class="beatmap-image-background" style="background-image: url('http://via.placeholder.com/450x150')">
+                    <div class="beatmap-image-transparancy-background beatmap-content" style="background-color: rgba(55, 55, 55, 0.3)">
+                        <div class="beatmap-meta">
+                            <div class="beatmap-song">
+                                @Html.DisplayFor(modelItem => item.Artist) - @Html.DisplayFor(modelItem => item.Song)
+                            </div>
+                            <div class="beatmap-user">
+                                Mapped by @Html.DisplayFor(modelItem => item.User)
+                            </div>
+                        </div>
+                        <div class="beatmap-links">
+                            <div class="favorite-image-wrapper">
+                                <img class="favorite-image" src="~/images/heartempty.png" />
+                            </div>
+                            <a href="~/downloads/@item.ID/beatmap.zip" download>
+                                <img class="download-image margin-center" src="~/images/download.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

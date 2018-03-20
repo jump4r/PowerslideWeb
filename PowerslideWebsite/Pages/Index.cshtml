@@ -4,105 +4,75 @@
     ViewData["Title"] = "Home page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+<div id="title-content">
+    <div id="game-description-wrapper" class="title-row">
+        <div id="title">
+            <h1>Powerslide</h1>
+        </div>
+        <ul id="gameplay-description">
+            <li class="gameplay-description-element">Create your own charts.</li>
+            <li class="gameplay-description-element">Use your own music.</li>
+            <li class="gameplay-description-element">Play anywhere.</li>
+        </ul>
+        <div id="gameplay-image-row">
+            <div class="center">
+                <image class="gameplay-image" src="/images/phone-gameplay-1.png"></image>
+                <image class="gameplay-image" src="/images/phone-gameplay-1.png"></image>
+                <image class="gameplay-image" src="/images/phone-gameplay-1.png"></image>
             </div>
         </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
+        <div id="nav-link-row">
+            <a href="http://www.github.com/jump4r/powerslide">
+                <image class="nav-link-image" src="/images/link-button-apk.png"></image>
+            </a>
+            <a href="https://youtu.be/lOcUJVEhojg">
+                <image class="nav-link-image" src="/images/link-button-youtube.png"></image>
+            </a>
         </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    <div class="title-row">
+        <div id="gameplay-phone-big">
+            <image src="/images/phone-gameplay-1.png"></image>
+        </div>
+    </div>
+    <!-- Removing this for build for NSBE Conference 
+    <div id="scroll-button-wrapper" class="center">
+        <a href=".">
+            <image id="scroll-button" src="/images/scroll-down.png"></image>
+        </a>
+    </div>
+    -->
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
+<div id="main-content">
+    <div id="main-content-wrapper">
+        <h1 class="main-content-header">What is Powerslide?</h1>
+        <p>
+            Powerslide is an open source Android rhythm game based on the Japanese arcde game Sound Voltex: Heavenly Haven. The game is designed to be mobile while
+            still having a competitive aspect. Hitcharts are created by the community and can be downloaded on the here
+        </p>
+
+        <h2 class="main-content-header">How To Play</h2>
+        <p>The goal of the game is to hit the notes in time with the music. Each note will fall down one of four "hitlanes", and when they reach the bar at the bottom, the player
+        should tap that hitlane. There are 3 different types of notes.</p>
         <ul>
-            <li>Sample pages using ASP.NET Core Razor Pages</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+            <li>Normal - This type of note should be tapped</li>
+            <li>Hold - This type of note should be tapped and held.</li>
+            <li>Flick - This type of note should be tapped and flicked left or right depending on the direcitonal arrows.</li>
         </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
+        <p>In addition, there is a fourth note type called a "Slide", distinguished by pink lines instead of black lines. A slide note is similar to a hold note, except you
+        should slide your finger along the black bar at the bottom.</p>
+
+        <h2 class="main-content-header">How To Download Hitcharts</h2>
+        <p>Please access the <a href="/Beatmaps">Beatmaps</a> page to download hitcharts and mp3 files. At the moment, you must manually add beatmaps to your phone. Please follow
+        the instructions below for installing beatmaps to your Android device. I will soon be making steps to make this process easier.</p>
         <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?linkid=852130">Working with Razor Pages.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
+            <li>Please connect your phone to your computer, and navigate to your phone's storage in your file explorer.</li>
+            <li>Navigate to the following directory: (Phone Name)\Internal shared storage\Android\data\com.Jump4r.Powerslide\files.</li>
+            <li>If a folder named "Beatmaps" is not there, create this folder.</li>
+            <li>Add your beatmap to the "Beatmaps" folder</li>
         </ul>
     </div>
 </div>
+
+

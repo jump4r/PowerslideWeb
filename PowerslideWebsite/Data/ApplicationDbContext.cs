@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+using PowerslideWebsite.Models;
+
 namespace PowerslideWebsite.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

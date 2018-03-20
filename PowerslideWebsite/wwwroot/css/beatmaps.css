@@ -1,0 +1,223 @@
+﻿.margin-center {
+    margin: 0 auto;
+}
+
+#submission-modal-wrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#submission-modal-form {
+    border-radius: 0.3rem;
+    border: 1px solid #777;
+    color: #222;
+    background-color: white;
+    width: 60%;
+    position: relative;
+}
+
+.submission-button-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#submission-modal-close {
+    margin: 10px;
+    right: 0;
+    position: absolute;
+}
+
+#submission-title {
+    text-align: center;
+}
+
+.submission-form-element {
+    padding: 5px;
+}
+
+
+/* Featured Beatmaps */
+/* Small Screens */
+.page-title {
+    text-align: center;
+    font-size: 3em;
+    font-family: "Noto Serif", serif;
+    padding-top: 30px;
+}
+
+#featured-beatmaps-wrapper {
+    background-color: #333;
+    color: white;
+}
+
+.featured-beatmaps-content {
+    padding: 20px 0;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.featured-beatmap-image-wrapper {
+    padding-bottom: 15px;
+}
+
+.featured-beatmap-image {
+    max-width: 200px;
+}
+
+.featured-beatmap-meta {
+    font-family: "Noto Sans", sans-serif;
+    font-style: italic;
+}
+
+.featured-beatmap-song {
+    font-size: 1.5em;
+    padding: 5px 0;
+}
+
+.featured-beatmap-user {
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+
+/* Big Screens */
+@media (min-width: 650px) {
+    .featured-beatmap-image {
+        max-width: 250px;
+    }
+}
+
+
+/* Filter Field*/
+/* Small Screens */
+
+.input-wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+#filter-input {
+    width: 95%;
+    min-height: 50px;
+
+    padding: 0 10px; 
+
+    border-radius: 10px;
+    border-color: #333;
+    border-width: 1px;
+    outline: none;
+}
+
+#filter-input:focus {
+    box-shadow: none;
+}
+
+/* Big Screens */
+@media (min-width: 650px) {
+    #filter-input {
+        width: 50%;
+    }
+}
+
+/* Beatmap List*/
+/* Small Screens */
+
+#beatmap-page-content {
+    background-color: #eee;
+    color: #222;
+}
+
+.beatmap-list {
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+
+.beatmap-image-background {
+    width: 325px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.beatmap-image-transparancy-background {
+    height: 100%;
+    width: 100%;
+}
+
+.beatmap-content {
+    color: white;
+    display: flex;
+    position: relative;
+}
+
+.beatmap {
+    display: inline-block;
+    margin: 10px;
+    max-width: 500px;
+}
+
+.beatmap-meta {
+    text-align: left;
+    font-family: "Noto Sans", sans-serif;
+    font-style: italic;
+    flex: 1 1 75%;
+    
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.beatmap-song {
+    font-size: 1.１em;
+}
+
+.beatmap-user {
+    font-size: 0.9em;
+}
+
+.beatmap-links {
+    flex: 1 1 25%;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.download-image, .favorite-image {
+    max-height: 25px;
+    max-width: 25px;
+    margin-bottom: 10px;
+}
+
+/* Big Screens */
+
+@media (min-width: 650px) {
+
+    .beatmap-image-background {
+        height: 150px;
+        width: 450px;
+    }
+
+    .beatmap-song {
+        font-size: 1.5em;
+    }
+
+    .beatmap-user {
+        font-size: 1.1em;
+    }
+
+    .download-image, .favorite-image {
+        max-height: 40px;
+        max-width: 40px;
+    }
+
+}

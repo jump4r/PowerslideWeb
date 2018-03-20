@@ -1,0 +1,16 @@
+[General]
+AudioFilename: Dango Daikazoku
+OsuOffset: 2390
+RawOffset: 2390
+BPM: 100
+
+[HitObjects]
+2390,1,1,2,true
+2990,1,2,1,false
+3590,1,1,2,true
+4190,1,2,1,false
+4790,1,1,2,true
+5090,1,2,1,false
+5390,1,1,2,true
+5990,1,0,1,true
+6590,1,3,2,false
